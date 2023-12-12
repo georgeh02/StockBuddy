@@ -31,4 +31,4 @@ Step 3
 - While still in virtual environment, run predict script
   - <code>python3 predict.py</code>
 
-StockBuddy will show the top 3 and bottom 3 predictions for stock prices based on today's dataset
+StockBuddy will print the top 3 and bottom 3 predictions for stock prices based on today's dataset, as well as save them to a text file.

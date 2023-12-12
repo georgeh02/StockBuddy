@@ -13,14 +13,19 @@ StockBuddy runs in terminal.
 Step 1
 
 - Download the "StockBuddy" folder from the github
-  Step 2
+
+Step 2
+
 - From terminal, create a virtual environment within the StockBuddy folder
   - 'python -m venv path\to\StockBuddy'
 - Activate the virtual environment
   - (mac / linux) 'source activate path\to\StockBuddy'
   - (windows) 'activate path\to\StockBuddy'
-- Install relevant python libraries - 'pip install pandas iexfinance kaggle zipfile numpy tqdm joblib tabulate'
-  Step 3
+- Install relevant python libraries
+  - 'pip install pandas iexfinance kaggle zipfile numpy tqdm joblib tabulate'
+
+Step 3
+
 - While still in virtual environment, run predict script
   - 'python3 predict.py'
 

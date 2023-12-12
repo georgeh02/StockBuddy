@@ -19,17 +19,16 @@ Step 1
 Step 2
 
 - From terminal, create a virtual environment within the StockBuddy folder
-  - 'python -m venv path\to\StockBuddy'
-    <code>python -m venv path\to\StockBuddy</code>
+  - <code>python -m venv path\to\StockBuddy</code>
 - Activate the virtual environment
-  - (mac / linux) 'source activate path\to\StockBuddy'
-  - (windows) 'activate path\to\StockBuddy'
+  - (mac / linux) <code>source activate path\to\StockBuddy</code>
+  - (windows) <code>activate path\to\StockBuddy</code>
 - Install relevant python libraries
-  - 'pip install pandas iexfinance kaggle zipfile numpy tqdm joblib tabulate'
+  - <code>pip install pandas iexfinance kaggle zipfile numpy tqdm joblib tabulate</code>
 
 Step 3
 
 - While still in virtual environment, run predict script
-  - 'python3 predict.py'
+  - <code>python3 predict.py</code>
 
 StockBuddy will show the top 3 and bottom 3 predictions for stock prices based on today's dataset

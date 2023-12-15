@@ -21,6 +21,8 @@ from tabulate import tabulate
 
 current_date = datetime.now().strftime('%Y-%m-%d')
 
+iex_token = ''
+
 if not os.path.exists('raw_data'):
     os.makedirs('raw_data')    
 
@@ -97,7 +99,7 @@ def predict(panel):
 
 def get_data(symbols, stock_price_data):
     try:
-        json = get_historical_data(symbols=symbols, start='2022-12-06', output_format='json', close_only=True, token='pk_39af642288a040c99f76fd6bc833177f')
+        json = get_historical_data(symbols=symbols, start='2022-12-06', output_format='json', close_only=True, token=iex_token)
         df = pd.DataFrame(json)
 
         for column in df.columns:

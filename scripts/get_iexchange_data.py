@@ -9,6 +9,8 @@ from iexfinance.stocks import get_historical_data
 from datetime import datetime, timedelta
 import time
 
+iex_token = ''
+
 def get_data(symbols, stock_price_data):
     """
     Gets and saves stock price data for given symbols
@@ -24,7 +26,7 @@ def get_data(symbols, stock_price_data):
     """
 
     try:
-        json = get_historical_data(symbols=symbols, start='2008-11-01', output_format='json', close_only=True, token='pk_39af642288a040c99f76fd6bc833177f')
+        json = get_historical_data(symbols=symbols, start='2008-11-01', output_format='json', close_only=True, token=iex_token)
         df = pd.DataFrame(json)
 
         for column in df.columns:
@@ -65,7 +67,7 @@ pd.set_option('display.max_columns', None)
 # stocks = stocks[:100]
 # #cost .681 credits
 # #goog only goes back to 2014???
-# json = get_historical_data(symbols=stocks, start='2008-11-01', output_format='json', close_only=True, token='pk_39af642288a040c99f76fd6bc833177f')
+# json = get_historical_data(symbols=stocks, start='2008-11-01', output_format='json', close_only=True, token=iex_token)
 # df = pd.DataFrame(json)
 # df.to_json('stockprice_200.json')
 # goog = df['GOOG']
@@ -80,7 +82,7 @@ pd.set_option('display.max_columns', None)
 # #### SCRIPT TO RUN MANUALLY ####
 # stocks_total = stocks_total[100:] #remove the 100 i just processed
 # stocks = stocks_total[:100] #get next 100 to process
-# json = get_historical_data(symbols=stocks, start='2008-11-01', output_format='json', close_only=True, token='pk_39af642288a040c99f76fd6bc833177f')
+# json = get_historical_data(symbols=stocks, start='2008-11-01', output_format='json', close_only=True, token=iex_token)
 # df = pd.DataFrame(json)
 # df.to_json('stockprice_2000.json')
 
